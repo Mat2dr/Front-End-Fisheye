@@ -50,9 +50,14 @@ const photographerDisplay = async () => {
 
     for (let i = 0; i < theMedia.length; i++) {
         if(theMedia[i].photographerId == photographe){
+            if(theMedia[i].hasOwnProperty('image')) {
                 const mediaModel = photoFactory(theMedia[i]);
                 const photoCardDOM = mediaModel.getPhotoCardDOM();
                 photoSection.appendChild(photoCardDOM);
+            } else if(theMedia[i].hasOwnProperty('video')){
+                console.log("heyyy");
+            }
+                
         }
     }
 
