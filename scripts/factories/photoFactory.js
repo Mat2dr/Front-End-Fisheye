@@ -3,8 +3,8 @@ function photoFactory(data) {
 
     function getPhotoCardDOM() {
         //Setup element
-        const photo = document.createElement('div');
-        photo.classList.add("photo");
+        const media = document.createElement('div');
+        media.classList.add("media");
 
         //Afficher la photo
         laPhotoName = thePhotographer.name.split(" ")[0]
@@ -13,45 +13,45 @@ function photoFactory(data) {
         img.setAttribute("src", laPhoto)
 
         //Desciption photo
-        const photoDesc = document.createElement('div');
-        photoDesc.classList.add("photo-desc");
+        const mediaDesc = document.createElement('div');
+        mediaDesc.classList.add("media-desc");
 
-        const photoTitre = document.createElement('div');
-        photoTitre.classList.add("titre");
+        const mediaTitre = document.createElement('div');
+        mediaTitre.classList.add("titre");
         const titre = document.createElement('p');
         titre.textContent = title;
-        photoTitre.appendChild(titre);
-        photoDesc.appendChild(photoTitre);
-        const photoLikes = document.createElement('div');
-        photoLikes.classList.add("likes");
-        const likesPhoto = document.createElement('p');
-        likesPhoto.innerHTML = likes;
+        mediaTitre.appendChild(titre);
+        mediaDesc.appendChild(mediaTitre);
+        const mediaLikes = document.createElement('div');
+        mediaLikes.classList.add("likes");
+        const likesMedia = document.createElement('p');
+        likesMedia.innerHTML = likes;
         const likesI = document.createElement('i')
         likesI.classList.add("far","fa-heart");
         //Like counter
 
-        photoLikes.appendChild(likesPhoto);
-        photoLikes.appendChild(likesI);
-        photoDesc.appendChild(photoLikes);
+        mediaLikes.appendChild(likesMedia);
+        mediaLikes.appendChild(likesI);
+        mediaDesc.appendChild(mediaLikes);
         likeCount = likeCount + likes;
 
-        photo.appendChild(img);
-        photo.appendChild(photoDesc);
+        media.appendChild(img);
+        media.appendChild(mediaDesc);
 
         //Like Event
         likesI.addEventListener("click", () => {
             if (likesI.classList.contains("far")) {
                 likesI.classList.replace("far","fas")
-                likesPhoto.innerHTML = likes + 1;
+                likesMedia.innerHTML = likes + 1;
                 likeCount++;
             } else {
                 likesI.classList.replace("fas","far")
-                likesPhoto.innerHTML = likes;
+                likesMedia.innerHTML = likes;
                 likeCount--;
             }
         }); 
 
-        return (photo);
+        return (media);
     }
     return { getPhotoCardDOM };
 }

@@ -55,7 +55,9 @@ const photographerDisplay = async () => {
                 const photoCardDOM = mediaModel.getPhotoCardDOM();
                 photoSection.appendChild(photoCardDOM);
             } else if(theMedia[i].hasOwnProperty('video')){
-                console.log("heyyy");
+                const mediaModel = videoFactory(theMedia[i]);
+                const videoCardDOM = mediaModel.getVideoCardDOM();
+                photoSection.appendChild(videoCardDOM);
             }
                 
         }

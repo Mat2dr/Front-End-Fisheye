@@ -51,24 +51,29 @@ main {
   padding: 50px 20px;
   gap: 50px;
 }
-.photo {
+.media {
 }
-.photo img {
+.media img {
   height: 350px;
   width: 350px;
   object-fit: cover;
   object-position: center center;
 }
-.photo-desc {
+.media video {
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+  object-position: center center;
+}
+.media-desc {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   color: #901c1c;
 }
-.photo-desc .titre {
-}
-.photo-desc .likes {
+
+.media-desc .likes {
   display: flex;
   align-items: center;
 }
