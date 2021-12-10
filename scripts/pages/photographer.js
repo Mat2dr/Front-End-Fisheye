@@ -62,6 +62,8 @@ const photographerDisplay = async () => {
                 
         }
     }
+    
+    gallery();
 
     //Zone pour afficher les données:
     const photographerRecap = document.querySelector(".photograph-recap");
@@ -85,7 +87,6 @@ const photographerDisplay = async () => {
 }
 
 photographerDisplay();
-gallery();
 
 
 /*--------- FUNCTIONS ---------*/
