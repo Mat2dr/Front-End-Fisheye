@@ -11,10 +11,8 @@ function videoFactory(data) {
         const laVideo = `assets/photographers/${laVideoName}/${video}`;
         const videoMedia = document.createElement( 'video' );
         videoMedia.setAttribute("src", laVideo);
-        videoMedia.setAttribute("type", "video/mp4");
-        videoMedia.setAttribute("controls","controls");
         const mediaEl = document.createElement( 'div' );
-        mediaEl.classList.add("media-El");
+        mediaEl.classList.add("media-El", "vid");
         mediaEl.appendChild(videoMedia);
 
 

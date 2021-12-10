@@ -6,6 +6,7 @@
 const photographe = window.location.search.split("?").join("");
 
 let likeCount = 0;
+let mediaCount = 1;
 
 /*--------- EVENTS ---------*/
 const fetchPhotographer = async () => {
@@ -58,10 +59,11 @@ const photographerDisplay = async () => {
                 const mediaModel = videoFactory(theMedia[i]);
                 const videoCardDOM = mediaModel.getVideoCardDOM();
                 photoSection.appendChild(videoCardDOM);
-            }
-                
+            }  
         }
     }
+    
+    gallery();
 
     //Zone pour afficher les données:
     const photographerRecap = document.querySelector(".photograph-recap");
@@ -85,7 +87,6 @@ const photographerDisplay = async () => {
 }
 
 photographerDisplay();
-gallery();
 
 
 /*--------- FUNCTIONS ---------*/

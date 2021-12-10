@@ -116,6 +116,64 @@ main {
   cursor: pointer;
 }
 
+/* Popup when img is clicked */
+
+.media-window {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.media-window .fa-times {
+  position: fixed;
+  top: 10px;
+  right: 50px;
+}
+.media-window .fa-times:hover {
+  color: #ff7777;
+}
+.media-window img {
+  max-width: 80vw;
+  max-height: 80vh;
+  padding: 0px 30px 0px 30px;
+}
+.media-window video {
+  max-width: 80vw;
+  max-height: 80vh;
+  padding: 0px 30px 0px 30px;
+}
+.media-window i {
+  color: #901c1c;
+  font-size: 45px;
+}
+.media-window .media-btn-next {
+  z-index: 500;
+  display: block;
+  cursor: pointer;
+  position: fixed;
+  right: 10px;
+  top: 48vh;
+}
+.fa-chevron-right:hover {
+  color: #ff7777;
+}
+.media-window .media-btn-prev {
+  z-index: 500;
+  display: block;
+  cursor: pointer;
+  position: fixed;
+  left: 10px;
+  top: 48vh;
+}
+.fa-chevron-left:hover {
+  color: #ff7777;
+}
 .photograph-recap-totalLikes {
   display: flex;
   flex-direction: row;

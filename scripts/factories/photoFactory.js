@@ -12,7 +12,7 @@ function photoFactory(data) {
         const img = document.createElement( 'img' );
         img.setAttribute("src", laPhoto)
         const mediaEl = document.createElement( 'div' );
-        mediaEl.classList.add("media-El");
+        mediaEl.classList.add("media-El", "ph");
         mediaEl.appendChild(img);
 
 
