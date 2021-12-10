@@ -14,7 +14,7 @@ function videoFactory(data) {
         videoMedia.setAttribute("type", "video/mp4");
         videoMedia.setAttribute("controls","controls");
         const mediaEl = document.createElement( 'div' );
-        mediaEl.classList.add("media-El");
+        mediaEl.classList.add("media-El", "vid");
         mediaEl.appendChild(videoMedia);
 
 

@@ -144,6 +144,12 @@ main {
   order: 2;
   padding: 0px 30px 0px 30px;
 }
+.media-window video {
+  max-width: 80vw;
+  max-height: 80vh;
+  order: 2;
+  padding: 0px 30px 0px 30px;
+}
 .media-window i {
   color: #901c1c;
   font-size: 45px;

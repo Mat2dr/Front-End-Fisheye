@@ -58,8 +58,7 @@ const photographerDisplay = async () => {
                 const mediaModel = videoFactory(theMedia[i]);
                 const videoCardDOM = mediaModel.getVideoCardDOM();
                 photoSection.appendChild(videoCardDOM);
-            }
-                
+            }     
         }
     }
     
