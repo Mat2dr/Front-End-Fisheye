@@ -13,6 +13,9 @@ function videoFactory(data) {
         videoMedia.setAttribute("src", laVideo);
         videoMedia.setAttribute("type", "video/mp4");
         videoMedia.setAttribute("controls","controls");
+        const mediaEl = document.createElement( 'div' );
+        mediaEl.classList.add("media-El");
+        mediaEl.appendChild(videoMedia);
 
 
         //Desciption photo
@@ -38,7 +41,7 @@ function videoFactory(data) {
         mediaDesc.appendChild(mediaLikes);
         likeCount = likeCount + likes;
 
-        media.appendChild(videoMedia);
+        media.appendChild(mediaEl);
         media.appendChild(mediaDesc);
 
         //Like Event
