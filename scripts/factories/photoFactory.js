@@ -11,6 +11,10 @@ function photoFactory(data) {
         const laPhoto = `assets/photographers/${laPhotoName}/${image}`;
         const img = document.createElement( 'img' );
         img.setAttribute("src", laPhoto)
+        const mediaEl = document.createElement( 'div' );
+        mediaEl.classList.add("media-El");
+        mediaEl.appendChild(img);
+
 
         //Desciption photo
         const mediaDesc = document.createElement('div');
@@ -35,7 +39,7 @@ function photoFactory(data) {
         mediaDesc.appendChild(mediaLikes);
         likeCount = likeCount + likes;
 
-        media.appendChild(img);
+        media.appendChild(mediaEl);
         media.appendChild(mediaDesc);
 
         //Like Event
