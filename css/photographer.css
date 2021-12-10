@@ -51,19 +51,28 @@ main {
   padding: 50px 20px;
   gap: 50px;
 }
-.media {
+.media-El {
+  overflow: hidden;
 }
 .media img {
   height: 350px;
   width: 350px;
   object-fit: cover;
   object-position: center center;
+  transition: all 0.3s ease;
+}
+.media img:hover {
+  transform: scale(1.1);
 }
 .media video {
   height: 350px;
   width: 350px;
   object-fit: cover;
   object-position: center center;
+  transition: all 0.3s ease;
+}
+.media video:hover {
+  transform: scale(1.1);
 }
 .media-desc {
   display: flex;
