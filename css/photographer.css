@@ -34,7 +34,17 @@ main {
   background-color: #901c1c;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
+.contact_button:hover {
+  background-color: #DB8876;
+  color: black;
+}
+.contact_button:focus {
+  background-color: #DB8876;
+  color: black;
+}
+
 
 .photoFiltre {
   display: flex;
@@ -136,7 +146,7 @@ main {
   right: 50px;
 }
 .media-window .fa-times:hover {
-  color: #ff7777;
+  color: #DB8876;
 }
 .media-window img {
   max-width: 80vw;
@@ -161,7 +171,7 @@ main {
   top: 48vh;
 }
 .fa-chevron-right:hover {
-  color: #ff7777;
+  color: #DB8876;
 }
 .media-window .media-btn-prev {
   z-index: 500;
@@ -172,7 +182,7 @@ main {
   top: 48vh;
 }
 .fa-chevron-left:hover {
-  color: #ff7777;
+  color: #DB8876;
 }
 .photograph-recap-totalLikes {
   display: flex;
@@ -193,7 +203,7 @@ main {
 
 .modal {
   border-radius: 5px;
-  background-color: #db8876;
+  background-color: #DB8876;
   display: flex;
   flex-direction: column;
   padding: 35px;
@@ -264,6 +274,21 @@ form input {
 
   .modal input {
     width: auto;
-
+  }
+  .photograph-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+  }
+  .photograph-header-name{
+    order: 3;
+    align-items: center;
+    text-align: center;
+  }
+  .photograph-header-photo {
+    order: 1;
+  }
+  .contact_button{
+    order: 3;
   }
 }
