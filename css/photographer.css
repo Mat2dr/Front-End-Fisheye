@@ -254,3 +254,16 @@ form input {
   border-radius: 5px;
   font-size: 20px;
 }
+
+@media only screen and (max-width: 850px) {
+  .modal  {
+    width:auto;
+    height: 100%;
+    margin: 0;
+  }
+
+  .modal input {
+    width: auto;
+
+  }
+}
