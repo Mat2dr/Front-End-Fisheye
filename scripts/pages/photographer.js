@@ -65,6 +65,8 @@ const photographerDisplay = async () => {
     //Function when you open an image or a video
     gallery();
 
+    dropDownFilter();
+
     //Zone pour afficher les données:
     const photographerRecap = document.querySelector(".photograph-recap");
     //Afficher les données
