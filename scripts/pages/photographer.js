@@ -48,7 +48,7 @@ const photographerDisplay = async () => {
 
     const photoSection = document.querySelector(".photos");
 
-
+    //Gallery Display Img and video
     for (let i = 0; i < theMedia.length; i++) {
         if(theMedia[i].photographerId == photographe){
             if(theMedia[i].hasOwnProperty('image')) {
@@ -62,7 +62,7 @@ const photographerDisplay = async () => {
             }  
         }
     }
-    
+    //Function when you open an image or a video
     gallery();
 
     //Zone pour afficher les données:
