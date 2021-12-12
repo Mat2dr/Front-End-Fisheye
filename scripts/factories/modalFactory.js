@@ -6,9 +6,10 @@ function modalFactory(data) {
         const modal = document.createElement( 'div' );
         modal.classList.add("modal");
         //Modal content
-        const headerModal = document.createElement( 'header' );
+        const headerModal = document.createElement( 'div' );
+        headerModal.classList.add("header");
         const h2 = document.createElement( 'h2' );
-        h2.textContent = 'Contactez-moi ' + name;
+        h2.innerHTML = 'Contactez-moi ' + '<br>' + name;
         const iClose = document.createElement( 'i' );
         iClose.classList.add("fas","fa-times");
         iClose.setAttribute("onclick", "closeModal()");
@@ -21,19 +22,31 @@ function modalFactory(data) {
             //Label + input
             const labelPrenom = document.createElement( 'label' );
             labelPrenom.textContent = 'Prénom';
+            labelPrenom.setAttribute("for", "prenom");
             const inputPrenom =  document.createElement( 'input' );
+            inputPrenom.setAttribute("id", "prenom");
+            inputPrenom.setAttribute("name", "prenom");
 
             const labelNom = document.createElement( 'label' );
             labelNom.textContent = 'Nom';
+            labelNom.setAttribute("for", "nom");
             const inputNom =  document.createElement( 'input' );
+            inputNom.setAttribute("id", "nom");
+            inputNom.setAttribute("name", "nom");
 
             const labelEmail = document.createElement( 'label' );
             labelEmail.textContent = 'Email';
+            labelEmail.setAttribute("for", "email");
             const inputEmail =  document.createElement( 'input' );
+            inputEmail.setAttribute("id", "email");
+            inputEmail.setAttribute("name", "email");
 
             const labelMessage = document.createElement( 'label' );
             labelMessage.textContent = 'Votre message';
+            labelMessage.setAttribute("for", "message");
             const inputMessage =  document.createElement( 'input' );
+            inputMessage.setAttribute("id", "message");
+            inputMessage.setAttribute("name", "message");
 
         const submitBtn = document.createElement( 'button' );
         submitBtn.classList.add("contact_button");
@@ -57,6 +70,12 @@ function modalFactory(data) {
         //Append to modal
         modal.appendChild(headerModal);
         modal.appendChild(form);
+
+        submitBtn.addEventListener("click", (event) => {
+            event.preventDefault();
+            
+            sendModal();    
+        });
 
         return (modal);
     }
