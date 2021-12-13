@@ -4,7 +4,8 @@ function recap() {
   //Afficher les données
   const photographRecapTotalLikes = document.createElement('div');
   photographRecapTotalLikes.classList.add("photograph-recap-totalLikes");
-  const likes = document.createElement('p');
+  let likes = document.createElement('p');
+  likes.classList.add("totalLikeNbr");
   likes.innerHTML = likeCount;
   const likesI = document.createElement('i')
   likesI.classList.add("fas","fa-heart");

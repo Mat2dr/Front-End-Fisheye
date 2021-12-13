@@ -71,35 +71,13 @@ const photographerDisplay = async () => {
     //Function to filter the media
     dropDownFilter();
     //Function to show the recap of the photographer
-    recap();
+    recap();   
+    //Like event
+    likeEvent();
 
-
-//     mediaAll = document.querySelectorAll(".media")
-
-//     mediaAll.forEach(media => {
-//         likesMedia = media.querySelector(".likeNbr");
-//         likeIcon = media.querySelector(".fa-heart");
-//         let likesInt = parseInt(likesMedia.innerHTML);
-
-
-//         likeIcon.addEventListener("click", () => {
-//             console.log(likesMedia)
-//             if (likeIcon.classList.contains("far")) {
-//                 likeIcon.classList.replace("far","fas")
-//                 likesMedia.innerHTML = likesInt + 1;
-//                 likeCount++;
-//             } else {
-//                 likeIcon.classList.replace("fas","far")
-//                 likesMedia.innerHTML = likesInt;
-//                 likeCount--;
-//             }
-//         });
-//     });
 }
 
 photographerDisplay();
 
 
 /*--------- FUNCTIONS ---------*/
-
-

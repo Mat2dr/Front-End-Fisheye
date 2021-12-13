@@ -43,6 +43,17 @@ function videoFactory(data) {
         media.appendChild(mediaEl);
         media.appendChild(mediaDesc);
 
+        //Like Event
+        likesI.addEventListener("click", () => {
+            if (likesI.classList.contains("far")) {
+                likesI.classList.replace("far","fas");
+                likesMedia.innerHTML = likes + 1;
+            } else {
+                likesI.classList.replace("fas","far");
+                likesMedia.innerHTML = likes;
+            }
+        }); 
+
         return (media);
     }
     return { getVideoCardDOM };
