@@ -58,7 +58,7 @@ function dropDownFilter() {
                 } else if (mediaA.title.toLowerCase() > mediaB.title.toLowerCase()) {
                     return 1;
                 }
-            });
+            });         
             //Generate the Media
             for (let i = 0; i < filterMedia.length; i++) {
                 if(filterMedia[i].hasOwnProperty('image')) {
