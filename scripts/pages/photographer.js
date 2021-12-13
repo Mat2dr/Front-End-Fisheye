@@ -65,30 +65,36 @@ const photographerDisplay = async () => {
             }  
         }
     }
+    
     //Function when you open an image or a video
     gallery();
-
+    //Function to filter the media
     dropDownFilter();
+    //Function to show the recap of the photographer
+    recap();
 
-    //Zone pour afficher les données:
-    const photographerRecap = document.querySelector(".photograph-recap");
-    //Afficher les données
-    const photographRecapTotalLikes = document.createElement('div');
-    photographRecapTotalLikes.classList.add("photograph-recap-totalLikes");
-    const likes = document.createElement('p');
-    likes.innerHTML = likeCount;
-    const likesI = document.createElement('i')
-    likesI.classList.add("fas","fa-heart");
-    const photographRecapTotalPrice = document.createElement('div');
-    photographRecapTotalPrice.classList.add("photograph-recap-price");
-    const price = document.createElement('h3');
-    price.innerHTML = thePhotographer.price + '€/jour';
 
-    photographRecapTotalLikes.appendChild(likes);
-    photographRecapTotalLikes.appendChild(likesI);
-    photographerRecap.appendChild(photographRecapTotalLikes);
-    photographRecapTotalPrice.appendChild(price);
-    photographerRecap.appendChild(photographRecapTotalPrice);
+//     mediaAll = document.querySelectorAll(".media")
+
+//     mediaAll.forEach(media => {
+//         likesMedia = media.querySelector(".likeNbr");
+//         likeIcon = media.querySelector(".fa-heart");
+//         let likesInt = parseInt(likesMedia.innerHTML);
+
+
+//         likeIcon.addEventListener("click", () => {
+//             console.log(likesMedia)
+//             if (likeIcon.classList.contains("far")) {
+//                 likeIcon.classList.replace("far","fas")
+//                 likesMedia.innerHTML = likesInt + 1;
+//                 likeCount++;
+//             } else {
+//                 likeIcon.classList.replace("fas","far")
+//                 likesMedia.innerHTML = likesInt;
+//                 likeCount--;
+//             }
+//         });
+//     });
 }
 
 photographerDisplay();
