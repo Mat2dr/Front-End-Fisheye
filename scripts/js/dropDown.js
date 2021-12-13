@@ -10,6 +10,7 @@ function dropDownFilter() {
         if (value === 'pop') {
             //Clear div
             photoSection.innerHTML = "";
+            likeCount = 0;
             //Order by likes
             filterMedia = photographerMedia.sort((mediaA, mediaB) => {
                 return mediaA.likes - mediaB.likes;
@@ -31,6 +32,7 @@ function dropDownFilter() {
         else if (value === 'date'){
             //Clear div
             photoSection.innerHTML = "";
+            likeCount = 0;
             //Order by dates
             filterMedia = photographerMedia.sort((mediaA, mediaB) => {
                 return new Date(mediaA.date).valueOf() - new Date(mediaB.date).valueOf();
@@ -51,6 +53,7 @@ function dropDownFilter() {
         else if (value === 'titre'){
             //Clear div
             photoSection.innerHTML = "";
+            likeCount = 0;
             //Order by title
             filterMedia = photographerMedia.sort((mediaA, mediaB) => {
                 if (mediaA.title.toLowerCase() < mediaB.title.toLowerCase()) {

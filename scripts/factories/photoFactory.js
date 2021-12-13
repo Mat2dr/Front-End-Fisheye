@@ -29,6 +29,7 @@ function photoFactory(data) {
         const mediaLikes = document.createElement('div');
         mediaLikes.classList.add("likes");
         const likesMedia = document.createElement('p');
+        likesMedia.classList.add("likeNbr");
         likesMedia.innerHTML = likes;
         const likesI = document.createElement('i')
         likesI.classList.add("far","fa-heart");
@@ -45,13 +46,11 @@ function photoFactory(data) {
         //Like Event
         likesI.addEventListener("click", () => {
             if (likesI.classList.contains("far")) {
-                likesI.classList.replace("far","fas")
+                likesI.classList.replace("far","fas");
                 likesMedia.innerHTML = likes + 1;
-                likeCount++;
             } else {
-                likesI.classList.replace("fas","far")
+                likesI.classList.replace("fas","far");
                 likesMedia.innerHTML = likes;
-                likeCount--;
             }
         }); 
 
