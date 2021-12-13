@@ -49,7 +49,28 @@ function dropDownFilter() {
             }
         }
         else if (value === 'titre'){
-
+            //Clear div
+            photoSection.innerHTML = "";
+            //Order by title
+            filterMedia = photographerMedia.sort((mediaA, mediaB) => {
+                if (mediaA.title.toLowerCase() < mediaB.title.toLowerCase()) {
+                    return -1;
+                } else if (mediaA.title.toLowerCase() > mediaB.title.toLowerCase()) {
+                    return 1;
+                }
+            });
+            //Generate the Media
+            for (let i = 0; i < filterMedia.length; i++) {
+                if(filterMedia[i].hasOwnProperty('image')) {
+                    const mediaModel = photoFactory(filterMedia[i]);
+                    const photoCardDOM = mediaModel.getPhotoCardDOM();
+                    photoSection.appendChild(photoCardDOM);
+                } else if(filterMedia[i].hasOwnProperty('video')){
+                    const mediaModel = videoFactory(filterMedia[i]);
+                    const videoCardDOM = mediaModel.getVideoCardDOM();
+                    photoSection.appendChild(videoCardDOM);
+                }  
+            };
         }
       });
 
