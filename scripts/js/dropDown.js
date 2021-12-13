@@ -8,17 +8,33 @@ function dropDownFilter() {
         const photoSection = document.querySelector(".photos");
        
         if (value === 'pop') {
+            //Clear div
             photoSection.innerHTML = "";
-
-            console.log('pop');
+            //Order by likes
+            filterMedia = photographerMedia.sort((mediaA, mediaB) => {
+                return mediaA.likes - mediaB.likes;
+            });
+            console.log(filterMedia);
+            //Generate the Media
+            for (let i = 0; i < filterMedia.length; i++) {
+                if(filterMedia[i].hasOwnProperty('image')) {
+                    const mediaModel = photoFactory(filterMedia[i]);
+                    const photoCardDOM = mediaModel.getPhotoCardDOM();
+                    photoSection.appendChild(photoCardDOM);
+                } else if(filterMedia[i].hasOwnProperty('video')){
+                    const mediaModel = videoFactory(filterMedia[i]);
+                    const videoCardDOM = mediaModel.getVideoCardDOM();
+                    photoSection.appendChild(videoCardDOM);
+                }  
+            }
         } 
         else if (value === 'date'){
             //Clear div
             photoSection.innerHTML = "";
-            //Order by date
+            //Order by dates
             filterMedia = photographerMedia.sort((mediaA, mediaB) => {
                 return new Date(mediaA.date).valueOf() - new Date(mediaB.date).valueOf();
-            })
+            });
             //Generate the Media
             for (let i = 0; i < filterMedia.length; i++) {
                 if(filterMedia[i].hasOwnProperty('image')) {
@@ -33,9 +49,7 @@ function dropDownFilter() {
             }
         }
         else if (value === 'titre'){
-            photoSection.innerHTML = "";
 
-            console.log('titre');
         }
       });
 
