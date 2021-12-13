@@ -7,6 +7,7 @@ const photographe = window.location.search.split("?").join("");
 
 let likeCount = 0;
 let mediaCount = 1;
+let photographerMedia = [];
 
 /*--------- EVENTS ---------*/
 const fetchPhotographer = async () => {
@@ -51,6 +52,8 @@ const photographerDisplay = async () => {
     //Gallery Display Img and video
     for (let i = 0; i < theMedia.length; i++) {
         if(theMedia[i].photographerId == photographe){
+            //push in a new array with only the media from the photographer
+            photographerMedia.push(theMedia[i]);
             if(theMedia[i].hasOwnProperty('image')) {
                 const mediaModel = photoFactory(theMedia[i]);
                 const photoCardDOM = mediaModel.getPhotoCardDOM();
@@ -64,6 +67,8 @@ const photographerDisplay = async () => {
     }
     //Function when you open an image or a video
     gallery();
+
+    dropDownFilter();
 
     //Zone pour afficher les données:
     const photographerRecap = document.querySelector(".photograph-recap");
