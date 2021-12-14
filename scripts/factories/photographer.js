@@ -4,6 +4,7 @@ function photographerFactory(data) {
     const { name, portrait, city, country, tags, tagline, price, id } = data;
 
     const picture = `assets/photographers/${portrait}`;
+    const alt = `Portrait de ${name}`;
     const localisationEx = `${city}, ${country}`;
     const prixEx = `${price}€/jour`;
 
@@ -16,13 +17,17 @@ function photographerFactory(data) {
         const headPhotographer = document.createElement('a');
         headPhotographer.classList.add("photographer-head");
         headPhotographer.setAttribute('id', id);
+        headPhotographer.setAttribute('title', name);
+        headPhotographer.setAttribute('href', '#');
+        
 
         const headPhotographerImg = document.createElement('div');
         headPhotographerImg.classList.add("photographer-head-img");
-        headPhotographerImg.setAttribute('role', 'img');
 
         const img = document.createElement( 'img' );
-        img.setAttribute("src", picture)
+        img.setAttribute("src", picture);
+        img.setAttribute('role', 'img');
+        img.setAttribute('alt', alt);
         const nom = document.createElement( 'h2' );
         nom.textContent = name;
 
@@ -46,7 +51,8 @@ function photographerFactory(data) {
         tag.textContent = tagline;
         const prix = document.createElement( 'h4' );
         prix.textContent = prixEx;
-        const photographerTags = document.createElement( 'div' );
+
+        const photographerTags = document.createElement( 'ul' );
         photographerTags.classList.add("photographerTags");
         
         
@@ -55,7 +61,7 @@ function photographerFactory(data) {
             //Push in array each tag
             tagArray.push(tagWord);
 
-            const photographerTag = document.createElement( 'div' );
+            const photographerTag = document.createElement( 'li' );
             photographerTag.classList.add("photographerTag");
             const p = document.createElement( 'p' );
             p.textContent = '#'+tagWord;
@@ -74,7 +80,7 @@ function photographerFactory(data) {
         article.appendChild(photographerTags);
 
         //Event pour aller a la page photographe
-        article.addEventListener("click", () => {
+        headPhotographer.addEventListener("click", () => {
             window.location = `photographer.html?${id}`;
         });
         return (article);

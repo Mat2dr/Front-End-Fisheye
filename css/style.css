@@ -5,6 +5,10 @@ body {
   margin: 0;
 }
 
+ul {
+  padding: 0;
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -24,15 +28,33 @@ h1 {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+
 .tagFilter {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 5px;
   align-items: center;
 }
 
-.photographerTagFilter {
+.tagFilter ul{
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 5px;
+  list-style-type: none;
+}
+.tagFilter li{
+  text-decoration: none;
+}
+
+.photographerTagFilter{
   cursor: pointer;
   border: 1px solid;
   border-radius: 15px;
@@ -96,7 +118,7 @@ h1 {
 }
 .photographer-head:active {
   transform: scale(1.03);
-}
+}     
 
 .photographer-head-img {
   position: relative;
@@ -158,6 +180,14 @@ h1 {
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+.photographerTags ul {
+  list-style-type: none;
+  text-decoration: none;
+}
+.photographerTags li {
+  list-style-type: none;
+  text-decoration: none;
 }
 
 .photographerTag p {
