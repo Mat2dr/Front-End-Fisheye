@@ -19,6 +19,7 @@ function photographerFactory(data) {
 
         const headPhotographerImg = document.createElement('div');
         headPhotographerImg.classList.add("photographer-head-img");
+        headPhotographerImg.setAttribute('role', 'img');
 
         const img = document.createElement( 'img' );
         img.setAttribute("src", picture)
