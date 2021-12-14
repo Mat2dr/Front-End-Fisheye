@@ -1,9 +1,11 @@
 function videoFactory(data) {
     const { id , photographerId , title , video, likes, date, price} = data;
 
+    const alt = `Vidéo ${title}`;
+
     function getVideoCardDOM() {
         //Setup element
-        const media = document.createElement('div');
+        const media = document.createElement('article');
         media.classList.add("media");
 
         //Afficher la photo
@@ -11,8 +13,11 @@ function videoFactory(data) {
         const laVideo = `assets/photographers/${laVideoName}/${video}`;
         const videoMedia = document.createElement( 'video' );
         videoMedia.setAttribute("src", laVideo);
-        const mediaEl = document.createElement( 'div' );
+        videoMedia.setAttribute("alt", alt);
+        const mediaEl = document.createElement( 'a' );
+        mediaEl.setAttribute("href", "#");
         mediaEl.classList.add("media-El", "vid");
+        mediaEl.setAttribute("title", "un media video");
         mediaEl.appendChild(videoMedia);
 
 

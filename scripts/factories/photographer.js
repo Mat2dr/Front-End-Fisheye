@@ -18,8 +18,7 @@ function photographerFactory(data) {
         headPhotographer.classList.add("photographer-head");
         headPhotographer.setAttribute('id', id);
         headPhotographer.setAttribute('title', name);
-        headPhotographer.setAttribute('href', '#');
-        
+        headPhotographer.setAttribute('href', `photographer.html?${id}`);
 
         const headPhotographerImg = document.createElement('div');
         headPhotographerImg.classList.add("photographer-head-img");
@@ -79,10 +78,6 @@ function photographerFactory(data) {
         article.appendChild(descPhotographer);
         article.appendChild(photographerTags);
 
-        //Event pour aller a la page photographe
-        headPhotographer.addEventListener("click", () => {
-            window.location = `photographer.html?${id}`;
-        });
         return (article);
     }
     return { getUserCardDOM }
