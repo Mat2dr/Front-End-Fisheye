@@ -149,7 +149,7 @@ a:visited {
   font-style: normal;
   font-weight: normal;
   color: #901c1c;
-  font-size: 13px;
+  font-size: 17px;
   line-height: 17px;
   text-align: center;
   margin: 0px;
@@ -157,17 +157,18 @@ a:visited {
 .photographer_section .photographer-desc p {
   font-style: normal;
   font-weight: normal;
-  font-size: 10px;
-  line-height: 13px;
+  font-size: 15px;
+  line-height: 15px;
   text-align: center;
   color: #000000;
   margin: 0px;
+  padding: 3px 0px;
 }
 .photographer_section .photographer-desc h4 {
   font-style: normal;
   font-weight: normal;
-  font-size: 9px;
-  line-height: 12px;
+  font-size: 14px;
+  line-height: 14px;
   text-align: center;
   color: #757575;
   margin: 0px;

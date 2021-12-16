@@ -16,6 +16,13 @@ main {
   justify-content: space-evenly;
 }
 
+.photograph-header h1{
+  font-size: 50px;
+  margin: 0;
+}
+
+
+
 .photograph-header-photo img {
   width: 200px;
   height: 200px;
