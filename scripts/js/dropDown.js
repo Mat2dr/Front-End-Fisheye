@@ -15,7 +15,6 @@ function dropDownFilter() {
             filterMedia = photographerMedia.sort((mediaA, mediaB) => {
                 return mediaA.likes - mediaB.likes;
             });
-            console.log(filterMedia);
             //Generate the Media
             for (let i = 0; i < filterMedia.length; i++) {
                 if(filterMedia[i].hasOwnProperty('image')) {
@@ -75,7 +74,10 @@ function dropDownFilter() {
                 }  
             };
         }
+        //Like event
+        likeEvent();
+        //Function when you open an image or a video
+        gallery();
       });
-
 };
 

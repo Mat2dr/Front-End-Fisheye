@@ -97,6 +97,14 @@ main {
   align-items: center;
 }
 
+.media-desc .likes .fa-heart {
+  transition: all 0.3s ease;
+}
+.media-desc .likes .fa-heart:hover {
+  cursor: pointer;
+}
+
+
 .photograph-recap {
   display: flex;
   flex-direction: row;
