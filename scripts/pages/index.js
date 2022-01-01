@@ -48,6 +48,7 @@ const photographersDisplay = async () => {
             photographerTag.classList.toggle("active")
             photographersSection.innerHTML = "";
 
+            //Add the tag to the array
             if (photographerTag.classList.contains("active")) {
                  tagFilterArray.push(tag);
                  console.log(tagFilterArray);
@@ -55,81 +56,23 @@ const photographersDisplay = async () => {
                 tagFilterArray.pop(tag);
                 console.log(tagFilterArray);
             }
+            //Check if the tag array have something in common
+            if (!tagFilterArray.length) {
+                thePhotographers.forEach((photographer) => {
+                    const photographerModel = photographerFactory(photographer);
+                    const userCardDOM = photographerModel.getUserCardDOM();
+                    photographersSection.appendChild(userCardDOM);
+                });
 
-            if (tagFilterArray.length === 1 ) {
-                for (var i = 0; i < thePhotographers.length; i++) {
-                    //Check if the photographers tag and tagFilterArray is =
-                    if (thePhotographers[i].tags.some(r=> tagFilterArray.indexOf(r) >= 0)) {
-                        const photographerModel = photographerFactory(thePhotographers[i]);
+            } else if (tagFilterArray.length > 0 ) {
+                thePhotographers.forEach((photographer) => {
+                    if (tagFilterArray.every(r => photographer.tags.includes(r))) {
+                        const photographerModel = photographerFactory(photographer);
                         const userCardDOM = photographerModel.getUserCardDOM();
                         photographersSection.appendChild(userCardDOM);
                     }
-                }
-            } else if (tagFilterArray.length > 1 ) {
-                console.log('La liste est longuuueee');
-                console.log(tagFilterArray);
-
-                // Loop for array1
-                for(let i = 0; i < tagFilterArray.length; i++) {
-                    // Loop for array2
-                    for (var j = 0; j < thePhotographers.length; j++) {
-                        for(let k = 0; k < thePhotographers.tags; k++) {
-                            // Compare the element of each and
-                            // every element from both of the
-                            // arrays
-                            if(tagFilterArray[i] === thePhotographers.tags[j]) {
-                                // Return if common element found
-                                console.log('common element found');
-                            }
-                        }
-                    }
-                }
-                // Return if no common element exist
-                console.log('no common element found');
+                });
             }
-
-
-
-
-
-
-
-
-
-            // if (photographerTag.classList.contains("active")) {
-            //     //Clear
-            //     photographersSection.innerHTML = "";
-
-            //     tagFilterArray.push(tag);
-            //     console.log(tagFilterArray);
-            //     for (var i = 0; i < thePhotographers.length; i++) {
-            //         //Check if the photographers tag and tagFilterArray is =
-            //         if (thePhotographers[i].tags.some(r=> tagFilterArray.indexOf(r) >= 0)) {
-            //             const photographerModel = photographerFactory(thePhotographers[i]);
-            //             const userCardDOM = photographerModel.getUserCardDOM();
-            //             photographersSection.appendChild(userCardDOM);
-            //         }
-            //     }
-            // } else if(tagFilterArray.length > 1){
-            //     tagFilterArray.pop(tag);
-            //     console.log(tagFilterArray);
-            //     for (var i = 0; i < thePhotographers.length; i++) {
-            //         //Check if the photographers tag and tagFilterArray is =
-            //         if (thePhotographers[i].tags.some(r=> tagFilterArray.indexOf(r) >= 0)) {
-            //             const photographerModel = photographerFactory(thePhotographers[i]);
-            //             const userCardDOM = photographerModel.getUserCardDOM();
-            //             photographersSection.appendChild(userCardDOM);
-            //         }
-            //     }
-            // }
-            // if (tagFilterArray.length === 0) {
-            //     for (var i = 0; i < thePhotographers.length; i++) {
-            //         //Check if the photographers tag and tagFilterArray is =
-            //         const photographerModel = photographerFactory(thePhotographers[i]);
-            //         const userCardDOM = photographerModel.getUserCardDOM();
-            //         photographersSection.appendChild(userCardDOM);
-            //     }
-            // }
         });
     });
 }
