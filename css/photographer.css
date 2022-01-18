@@ -49,6 +49,7 @@ main {
 .photoFiltre {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 30px;
   padding: 50px 20px;
 }
@@ -264,6 +265,105 @@ form input {
   border-radius: 5px;
   font-size: 20px;
 }
+
+/* DROPDOWN */
+.select-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  -webkit-box-shadow: 0px 5px 17px -4px rgba(0, 0, 0, 0.65);
+  box-shadow: 0px 5px 17px -4px rgba(0, 0, 0, 0.65);
+}
+.option-container {
+  top: 50px;
+  position: absolute;
+  display: block;
+  background-color: #901c1c;
+  width: 100%;
+  overflow: hidden;
+  color: rgb(56, 52, 52);
+  opacity: 0;
+  z-index: 3;
+  min-height: 0px;
+  transition: opacity 0.4s ease-in-out, padding-bottom 0.2s ease-in-out,
+  box-shadow 0.4s ease-in-out, -webkit-box-shadow 0.4s ease-in-out;
+  pointer-events: none;
+  border-radius: 0px 0px 5px 5px;
+}
+.selected {
+  padding-top: 12px;
+  padding-left: 14px;
+  padding-right: 14px;
+  cursor: pointer;
+}
+.select-box .selected .radio {
+  display: none;
+}
+.select-box .option .radio {
+  display: none;
+}
+.selected {
+  background-color: #901c1c;
+  border-radius: 5px;
+  color: black;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+}
+.selected p {
+  pointer-events: none;
+  color: white;
+  margin: 0;
+}
+.selected img {
+  transition: all 0.7s ease-out;
+  height: 30px;
+  pointer-events: none;
+}
+.select-box .option:hover {
+  color: #27d8d4;
+}
+.option label {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 12px;
+  transition-duration: 0.4s ease-in;
+  position: relative;
+  color: white;
+}
+.separateur-radio {
+  height: 2px;
+  margin-left: 14px;
+  margin-right: 14px;
+  background-color: #f4f4f4;
+}
+
+/* Pour le JS */
+.active {
+  opacity: 1;
+  overflow-y: hidden;
+  min-height: 100%;
+  pointer-events: all;-webkit-box-shadow: 0px 50px 17px 0px rgba(0, 0, 0, 0.65);
+  box-shadow: 0px 15px 17px -4px rgba(0, 0, 0, 0.65);
+}
+.activeChevron {
+  transform: rotateZ(-180deg);
+}
+
+/* Pour le label de titre */
+.removeTitle {
+  display: none;
+}
+
 
 @media only screen and (max-width: 850px) {
   .modal  {

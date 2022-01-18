@@ -20,12 +20,31 @@
 
       <div class="photoFiltre">
         <p>Trier par</p>
-        <select id="filterBtn">
-          <option value="pop">Popularité</option>
-          <option value="date" rel="icon-temperature">Date</option>
-          <option value="titre" rel="icon-temperature">Titre</option>
-      </select> 
+        <div class="select-box">
+          <div class="selected">
+            <p></p>
+            <img src="assets/icons/expand.png" alt="Chevron Down" class="chevron-down">
+          </div>
+          <div class="option-container">
+            <div class="separateur-radio"></div>
+            <div class="option option-title">
+              <input type="radio" id="Popularité" name="filtreBox" class="radio" value="pop" checked>
+              <label for="Popularité" class="title-label">Popularité</label>
+              <div class="separateur-radio"></div>
+            </div>
+            <div class="option">
+              <input type="radio" id="Date" name="filtreBox" class="radio" value="date" >
+              <label for="Date">Date</label>
+              <div class="separateur-radio"></div>
+            </div>
+            <div class="option">
+              <input type="radio" id="Titre" name="filtreBox" class="radio" value="titre" >
+              <label for="Titre">Titre</label>
+            </div>
+          </div>
+        </div>
       </div>
+
 
       <div class="photos"></div>
 
