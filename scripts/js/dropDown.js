@@ -35,14 +35,12 @@ for (const radio of radios) {
  //Pour le chargement de la page
  if (radio.checked === true && radio.value === "pop"){
    selectedLabel.innerHTML = document.querySelector('[name="filtreBox"]:checked').id;
-   console.log(document.querySelector('[name="filtreBox"]:checked').value);
    optionTitle.classList.add("removeTitle");
  }
  //Si il y a un changement
  radio.addEventListener('change', function() {
    if ( radio.value === "pop" ) {
         optionTitle.classList.add("removeTitle");
-        console.log(document.querySelector('[name="filtreBox"]:checked').value);
         //Clear div
         photoSection.innerHTML = "";
         likeCount = 0;
@@ -63,7 +61,6 @@ for (const radio of radios) {
             }  
         }
    } else if (radio.value === "date") {
-        console.log(document.querySelector('[name="filtreBox"]:checked').value);
         optionTitle.classList.remove("removeTitle");
         //Clear div
         photoSection.innerHTML = "";
@@ -85,7 +82,6 @@ for (const radio of radios) {
             }  
         }
    } else if (radio.value === "titre") {
-        console.log(document.querySelector('[name="filtreBox"]:checked').value);
         optionTitle.classList.remove("removeTitle");
         //Clear div
         photoSection.innerHTML = "";
