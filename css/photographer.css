@@ -37,14 +37,13 @@ main {
   transition: all 0.3s ease;
 }
 .contact_button:hover {
-  background-color: #DB8876;
+  background-color: #db8876;
   color: black;
 }
 .contact_button:focus {
-  background-color: #DB8876;
+  background-color: #db8876;
   color: black;
 }
-
 
 .photoFiltre {
   display: flex;
@@ -97,6 +96,11 @@ main {
   display: flex;
   align-items: center;
 }
+.media-desc .likes i {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
 
 .photograph-recap {
   display: flex;
@@ -118,6 +122,7 @@ main {
 .photograph-recap I {
   font-size: 18px;
   font-weight: 600;
+  pointer-events: none;
 }
 .photograph-recap h3 {
   font-size: 18px;
@@ -147,7 +152,7 @@ main {
   right: 50px;
 }
 .media-window .fa-times:hover {
-  color: #DB8876;
+  color: #db8876;
 }
 .media-window img {
   max-width: 80vw;
@@ -172,7 +177,7 @@ main {
   top: 48vh;
 }
 .fa-chevron-right:hover {
-  color: #DB8876;
+  color: #db8876;
 }
 .media-window .media-btn-prev {
   z-index: 500;
@@ -183,7 +188,7 @@ main {
   top: 48vh;
 }
 .fa-chevron-left:hover {
-  color: #DB8876;
+  color: #db8876;
 }
 .photograph-recap-totalLikes {
   display: flex;
@@ -204,7 +209,7 @@ main {
 
 .modal {
   border-radius: 5px;
-  background-color: #DB8876;
+  background-color: #db8876;
   display: flex;
   flex-direction: column;
   padding: 35px;
@@ -222,7 +227,7 @@ main {
   padding: 0px;
 }
 
-.modal .header i{
+.modal .header i {
   color: white;
   font-size: 50px;
   cursor: pointer;
@@ -287,7 +292,7 @@ form input {
   z-index: 3;
   min-height: 0px;
   transition: opacity 0.4s ease-in-out, padding-bottom 0.2s ease-in-out,
-  box-shadow 0.4s ease-in-out, -webkit-box-shadow 0.4s ease-in-out;
+    box-shadow 0.4s ease-in-out, -webkit-box-shadow 0.4s ease-in-out;
   pointer-events: none;
   border-radius: 0px 0px 5px 5px;
 }
@@ -352,7 +357,8 @@ form input {
   opacity: 1;
   overflow-y: hidden;
   min-height: 100%;
-  pointer-events: all;-webkit-box-shadow: 0px 50px 17px 0px rgba(0, 0, 0, 0.65);
+  pointer-events: all;
+  -webkit-box-shadow: 0px 50px 17px 0px rgba(0, 0, 0, 0.65);
   box-shadow: 0px 15px 17px -4px rgba(0, 0, 0, 0.65);
 }
 .activeChevron {
@@ -364,10 +370,9 @@ form input {
   display: none;
 }
 
-
 @media only screen and (max-width: 850px) {
-  .modal  {
-    width:auto;
+  .modal {
+    width: auto;
     height: 100%;
     margin: 0;
   }
@@ -380,7 +385,7 @@ form input {
     align-items: center;
     padding: 20px 0px;
   }
-  .photograph-header-name{
+  .photograph-header-name {
     order: 3;
     align-items: center;
     text-align: center;
@@ -388,7 +393,7 @@ form input {
   .photograph-header-photo {
     order: 1;
   }
-  .contact_button{
+  .contact_button {
     order: 3;
   }
 }

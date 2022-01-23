@@ -111,5 +111,9 @@ for (const radio of radios) {
             }  
         }
    }
+   //Function when you open an image or a video
+   gallery();
+   //Like event
+   likeEvent();
   }
  )};

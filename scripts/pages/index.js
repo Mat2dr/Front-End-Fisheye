@@ -45,11 +45,11 @@ const photographersDisplay = async () => {
 
         //Event when a filter is selected
         photographerTag.addEventListener("click",() => {
-            photographerTag.classList.toggle("active")
+            photographerTag.classList.toggle("activeTag")
             photographersSection.innerHTML = "";
 
             //Add the tag to the array
-            if (photographerTag.classList.contains("active")) {
+            if (photographerTag.classList.contains("activeTag")) {
                  tagFilterArray.push(tag);
                  console.log(tagFilterArray);
             } else {
