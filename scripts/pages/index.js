@@ -32,16 +32,33 @@ const photographersDisplay = async () => {
     });
     // Remove duplicates from tagArray
     let uniqueTagArray = [...new Set(tagArray)];
+
+    const tagFilters = document.querySelector(".tagFilter");
+    const photographerTags = document.createElement( 'ul' );
     //Create tag selector
     uniqueTagArray.forEach(tag =>{
-        const tagFilters = document.querySelector(".tagFilter");
 
-        const photographerTag = document.createElement( 'div' );
+        const photographerTagLink = document.createElement( 'a' );
+        photographerTagLink.setAttribute('href', '#');
+        const photographerTag = document.createElement( 'li' );
         photographerTag.classList.add("photographerTagFilter");
+
         const p = document.createElement( 'p' );
         p.textContent = '#'+tag;
         photographerTag.appendChild(p);
-        tagFilters.appendChild(photographerTag);
+
+
+        
+        //Append
+        photographerTags.appendChild(photographerTagLink);
+        photographerTagLink.appendChild(photographerTag);
+        tagFilters.appendChild(photographerTags);
+
+        // photographerTag.classList.add("photographerTagFilter");
+        // const p = document.createElement( 'p' );
+        // p.textContent = '#'+tag;
+        // photographerTag.appendChild(p);
+        // tagFilters.appendChild(photographerTag);
 
         //Event when a filter is selected
         photographerTag.addEventListener("click",() => {

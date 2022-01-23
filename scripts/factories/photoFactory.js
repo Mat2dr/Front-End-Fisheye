@@ -1,18 +1,23 @@
 function photoFactory(data) {
     const { id , photographerId , title , image, likes, date, price} = data;
 
+    const alt = `Photo ${title}`;
+
     function getPhotoCardDOM() {
         //Setup element
-        const media = document.createElement('div');
+        const media = document.createElement('article');
         media.classList.add("media");
 
         //Afficher la photo
         laPhotoName = thePhotographer.name.split(" ")[0]
         const laPhoto = `assets/photographers/${laPhotoName}/${image}`;
         const img = document.createElement( 'img' );
-        img.setAttribute("src", laPhoto)
-        const mediaEl = document.createElement( 'div' );
+        img.setAttribute("src", laPhoto);
+        img.setAttribute("alt", alt);
+        const mediaEl = document.createElement( 'a' );
+        mediaEl.setAttribute("href", "#");
         mediaEl.classList.add("media-El", "ph");
+        mediaEl.setAttribute("title", "un media photo");
         mediaEl.appendChild(img);
 
 

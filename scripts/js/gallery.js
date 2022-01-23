@@ -18,6 +18,8 @@ function gallery() {
                     newMediaWindow.setAttribute("class", "media-window");
 
                     let closeMedia = document.createElement('a');
+                    closeMedia.setAttribute("href", "#");
+                    closeMedia.setAttribute("title", "Fermer la modale");
                     let close = document.createElement('i');
                     close.classList.add("fas","fa-times");
                     closeMedia.appendChild(close);
@@ -31,6 +33,8 @@ function gallery() {
 
                     //Next Btn
                     newNextBtn = document.createElement('a');
+                    newNextBtn.setAttribute("href", "#");
+                    newNextBtn.setAttribute("title", "Media suivant");
                     let Next = document.createElement('i');
                     Next.classList.add("fas","fa-chevron-right");
                     newNextBtn.appendChild(Next);
@@ -39,6 +43,8 @@ function gallery() {
                     newNextBtn.setAttribute("onclick", "changeMedia(1)");
                     //Prev Btn
                     newPrevBtn = document.createElement('a');
+                    newPrevBtn.setAttribute("href", "#");
+                    newPrevBtn.setAttribute("title", "Media précédent");
                     let Prev = document.createElement('i');
                     Prev.classList.add("fas","fa-chevron-left");
                     newPrevBtn.appendChild(Prev);

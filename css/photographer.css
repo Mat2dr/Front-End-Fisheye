@@ -16,6 +16,13 @@ main {
   justify-content: space-evenly;
 }
 
+.photograph-header h1{
+  font-size: 50px;
+  margin: 0;
+}
+
+
+
 .photograph-header-photo img {
   width: 200px;
   height: 200px;
@@ -101,6 +108,14 @@ main {
   align-items: center;
   cursor: pointer;
 }
+
+.media-desc .likes .fa-heart {
+  transition: all 0.3s ease;
+}
+.media-desc .likes .fa-heart:hover {
+  cursor: pointer;
+}
+
 
 .photograph-recap {
   display: flex;
