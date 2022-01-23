@@ -65,10 +65,11 @@ const photographerDisplay = async () => {
             }  
         }
     }
-    //Function to filter the media
-    dropDownFilter();
+    
     //Function when you open an image or a video
     gallery();
+    //Function to filter the media
+    
     //Function to show the recap of the photographer
     recap();   
     //Like event
