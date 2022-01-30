@@ -16,12 +16,10 @@ main {
   justify-content: space-evenly;
 }
 
-.photograph-header h1{
+.photograph-header h1 {
   font-size: 50px;
   margin: 0;
 }
-
-
 
 .photograph-header-photo img {
   width: 200px;
@@ -115,7 +113,6 @@ main {
 .media-desc .likes .fa-heart:hover {
   cursor: pointer;
 }
-
 
 .photograph-recap {
   display: flex;
@@ -257,7 +254,10 @@ main {
   margin: 0px;
   padding: 20px 0px;
 }
-
+.close_btn {
+  background-color: #db8876;
+  border: none;
+}
 form {
   display: flex;
   width: 100%;

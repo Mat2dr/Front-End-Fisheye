@@ -5,6 +5,7 @@ function displayModal() {
     const contactModel = modalFactory(thePhotographer);
     const modalCardDOM = contactModel.getModalCardDOM();
     modal.appendChild(modalCardDOM);
+    focusModal();
 }
 
 function closeModal() {
