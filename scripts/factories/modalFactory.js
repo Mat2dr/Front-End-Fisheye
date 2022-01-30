@@ -10,11 +10,13 @@ function modalFactory(data) {
         headerModal.classList.add("header");
         const h2 = document.createElement( 'h2' );
         h2.innerHTML = 'Contactez-moi ' + '<br>' + name;
+        const closeBtn = document.createElement( 'button' );
+        closeBtn.classList.add("close_btn");
         const iClose = document.createElement( 'i' );
         iClose.classList.add("fas","fa-times");
-        iClose.setAttribute("onclick", "closeModal()");
+        closeBtn.appendChild(iClose);
         headerModal.appendChild(h2);
-        headerModal.appendChild(iClose);
+        headerModal.appendChild(closeBtn);
 
         //Form content
         const form = document.createElement( 'form' );
@@ -75,6 +77,9 @@ function modalFactory(data) {
             event.preventDefault();
             
             sendModal();    
+        });
+        closeBtn.addEventListener("click", () => {
+            closeModal();    
         });
 
         return (modal);
