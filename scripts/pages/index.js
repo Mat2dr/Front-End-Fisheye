@@ -61,7 +61,7 @@ const photographersDisplay = async () => {
         // tagFilters.appendChild(photographerTag);
 
         //Event when a filter is selected
-        photographerTag.addEventListener("click",() => {
+        photographerTagLink.addEventListener("click",() => {
             photographerTag.classList.toggle("activeTag")
             photographersSection.innerHTML = "";
 
