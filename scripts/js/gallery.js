@@ -17,9 +17,9 @@ function gallery() {
                     container.appendChild(newMediaWindow);
                     newMediaWindow.setAttribute("class", "media-window");
 
-                    let closeMedia = document.createElement('a');
-                    closeMedia.setAttribute("href", "#");
+                    let closeMedia = document.createElement('button');
                     closeMedia.setAttribute("title", "Fermer la modale");
+                    closeMedia.setAttribute("class", "close-window-btn");
                     let close = document.createElement('i');
                     close.classList.add("fas","fa-times");
                     closeMedia.appendChild(close);
@@ -92,6 +92,7 @@ function gallery() {
                     newPrevBtn.setAttribute("class", "media-btn-prev");
                     newPrevBtn.setAttribute("onclick", "changeMedia(0)");
                 }
+                focusMedia();
             }
         })
     }
