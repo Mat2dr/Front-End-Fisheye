@@ -17,9 +17,9 @@ function gallery() {
                     container.appendChild(newMediaWindow);
                     newMediaWindow.setAttribute("class", "media-window");
 
-                    let closeMedia = document.createElement('a');
-                    closeMedia.setAttribute("href", "#");
+                    let closeMedia = document.createElement('button');
                     closeMedia.setAttribute("title", "Fermer la modale");
+                    closeMedia.setAttribute("class", "close-window-btn");
                     let close = document.createElement('i');
                     close.classList.add("fas","fa-times");
                     closeMedia.appendChild(close);
@@ -61,7 +61,9 @@ function gallery() {
                     container.appendChild(newMediaWindow);
                     newMediaWindow.setAttribute("class", "media-window");
 
-                    let closeMedia = document.createElement('a');
+                    let closeMedia = document.createElement('button');
+                    closeMedia.setAttribute("title", "Fermer la modale");
+                    closeMedia.setAttribute("class", "close-window-btn");
                     let close = document.createElement('i');
                     close.classList.add("fas","fa-times");
                     closeMedia.appendChild(close);
@@ -75,8 +77,10 @@ function gallery() {
                     newMedia.setAttribute("src", getMediaSrc );
                     newMedia.setAttribute("id", "current-media");
 
-                    //Next Btm
+                    //Next Btn
                     newNextBtn = document.createElement('a');
+                    newNextBtn.setAttribute("href", "#");
+                    newNextBtn.setAttribute("title", "Media suivant");
                     let Next = document.createElement('i');
                     Next.classList.add("fas","fa-chevron-right");
                     newNextBtn.appendChild(Next);
@@ -85,6 +89,8 @@ function gallery() {
                     newNextBtn.setAttribute("onclick", "changeMedia(1)");
                     //Prev Btn
                     newPrevBtn = document.createElement('a');
+                    newPrevBtn.setAttribute("href", "#");
+                    newPrevBtn.setAttribute("title", "Media précédent");
                     let Prev = document.createElement('i');
                     Prev.classList.add("fas","fa-chevron-left");
                     newPrevBtn.appendChild(Prev);
@@ -92,6 +98,7 @@ function gallery() {
                     newPrevBtn.setAttribute("class", "media-btn-prev");
                     newPrevBtn.setAttribute("onclick", "changeMedia(0)");
                 }
+                focusMedia();
             }
         })
     }

@@ -42,7 +42,7 @@ a:visited {
   align-items: center;
 }
 
-.tagFilter ul{
+.tagFilter ul {
   text-decoration: none;
   display: flex;
   flex-direction: row;
@@ -50,11 +50,11 @@ a:visited {
   column-gap: 5px;
   list-style-type: none;
 }
-.tagFilter li{
+.tagFilter li {
   text-decoration: none;
 }
 
-.photographerTagFilter{
+.photographerTagFilter {
   cursor: pointer;
   border: 1px solid;
   border-radius: 15px;
@@ -118,7 +118,7 @@ a:visited {
 }
 .photographer-head:active {
   transform: scale(1.03);
-}     
+}
 
 .photographer-head-img {
   position: relative;
@@ -221,6 +221,10 @@ a:visited {
   }
 
   .photos {
+    justify-content: center;
+  }
+
+  .photoFiltre {
     justify-content: center;
   }
 }

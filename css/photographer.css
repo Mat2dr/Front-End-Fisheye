@@ -158,10 +158,12 @@ main {
   align-items: center;
   z-index: 100;
 }
-.media-window .fa-times {
+.media-window .close-window-btn {
   position: fixed;
   top: 10px;
   right: 50px;
+  background-color: transparent;
+  border: none;
 }
 .media-window .fa-times:hover {
   color: #db8876;

@@ -12,21 +12,25 @@ const optionList = document.querySelectorAll(".option");
 const radios = Array.from(document.querySelectorAll('[name="filtreBox"]'));
 
 //EVENT LISTENER
-selected.addEventListener("mouseenter",()=> {
+selected.addEventListener("click",()=> {
   optionsContainer.classList.add("active");
   chevronDown.classList.add("activeChevron");
 });
-selectBox.addEventListener("mouseleave",()=> {
-  optionsContainer.classList.remove("active");
-  chevronDown.classList.remove("activeChevron");
+selected.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+
+        optionsContainer.classList.add("active");
+        chevronDown.classList.add("activeChevron");
+    }
 });
 
 //Affiche dans la div selected
-optionList.forEach(option => {
- option.addEventListener("click", ()=> {
-   selectedLabel.innerHTML = option.querySelector("label").innerHTML;
-   optionsContainer.classList.remove("active");
- })
+optionList.forEach(option => {  
+    option.addEventListener("click", ()=> {
+        selectedLabel.innerHTML = option.querySelector("label").innerHTML;
+        optionsContainer.classList.remove("active");
+    })
 });
 
 //Affiche dans la console la radio select
